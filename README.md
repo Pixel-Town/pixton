@@ -1,56 +1,80 @@
-# Pixton · Field Station 01 — clone
+<p align="center">
+  <img src="_brand/pixton-banner.png" alt="Pixton · Field Station 01" width="100%">
+</p>
 
-A faithful static recreation of [pixton.xyz](https://www.pixton.xyz/) — landing page,
-the three content pages, and all the animations — rebuilt as plain HTML/CSS/JS
-(no build step, no backend required).
+<h1 align="center">Pixton · Field Station 01</h1>
 
-## Run it
+<p align="center">
+  A small town that runs whether or not you watch.
+</p>
 
-Any static server works. From this folder's parent (`D:\`):
+<p align="center">
+  <a href="https://pixel-town.github.io/pixton/">🌐 Live demo</a> ·
+  <a href="https://x.com/PixeTown">𝕏 @PixeTown</a> ·
+  <img src="https://img.shields.io/badge/license-MIT-d96638" alt="MIT">
+  <img src="https://img.shields.io/badge/stack-HTML%20%C2%B7%20CSS%20%C2%B7%20Canvas%20%C2%B7%20vanilla%20JS-6f8a4f" alt="stack">
+</p>
 
-```powershell
-python -m http.server 8123 --directory pixhab-clone
+---
+
+**Pixton** is a tiny, observable pixel town. Six residents live on a **25×18 tile grid**
+and move on a **2-second tick** — they wander the square, bump into each other, and
+trade small lines, then keep going on their own clock. You don't control them; you
+stand at the window and watch the town live.
+
+- **Watch** — the town ticks on its own; residents wander, idle, and walk with smooth eased motion.
+- **Listen** — every chance encounter writes a timestamped line into the live **Field Log**.
+- **Adopt** — log in and add your own resident (name, role, palette); they join on the next tick.
+
+Built as a self-contained front-end — **HTML · CSS · Canvas · vanilla JS** — with no
+build step and no backend. The whole town runs in the browser.
+
+## ✨ Features & animations
+
+- **Live town canvas** — 25×18 grid, fountain shimmer, lit windows, 6 pixel residents
+  with walk-bob and eased interpolation; they drift toward each other so encounters happen.
+- **Encounters → Field Log** — residents stop, face each other, pop speech bubbles, and
+  log the exchange live.
+- **Resident bios** — click any resident (card, census row, or sprite on the canvas) for a
+  rise-in modal with their bio and recent transcript.
+- **Login + adopt flow** — log in and author a resident; they appear in the census,
+  "My residents", and walk the square from the next tick.
+- **Pulsing live dots, hover transitions, frame corner brackets, FAQ accordion, page fade-ins.**
+
+## 🚀 Run locally
+
+Any static server works:
+
+```bash
+# from the project folder
+python -m http.server 8123
 # then open http://localhost:8123
 ```
 
-Or just open `index.html` directly in a browser.
+Or simply open `index.html` in a browser.
 
-## Files
+## 🗂️ Structure
 
-| File          | Purpose |
-|---------------|---------|
-| `index.html`  | Landing + live station (hero, canvas town, census, field log, adopt, residents, how-it-works) |
-| `about.html`  | "Field manifest" — beliefs grid |
-| `roadmap.html`| Four-phase roadmap with status badges |
-| `faq.html`    | 14-question accordion |
-| `styles.css`  | Original site stylesheet (Tailwind utilities + `pixhab-*` design system) + clone additions |
-| `app.js`      | The town simulation engine (canvas renderer, 2s tick, encounters, field log, census, bio modal, wallet/adopt flow) |
-| `faq.js`      | FAQ accordion data + renderer |
-| `_raw/`       | Source HTML/CSS captured from the live site for reference |
+| Path           | Purpose |
+|----------------|---------|
+| `index.html`   | Landing + live station (hero, canvas town, census, field log, adopt, residents) |
+| `about.html`   | "Field manifest" — what we believe |
+| `roadmap.html` | Four-phase roadmap |
+| `faq.html` · `faq.js` | 14-question accordion |
+| `styles.css`   | Design system (color tokens, type, the `pixhab-pulse` keyframe) + utilities |
+| `app.js`       | Town simulation engine — canvas renderer, 2s tick, encounters, field log, census, bio modal, login/adopt |
+| `_brand/`      | X avatar + banner, the Python generator (`make_brand.py`) and fonts |
 
-## Animations reproduced
+## 🎨 Brand assets
 
-- **Live town canvas** — 25×18 pixel grid, fountain shimmer, lit windows, 6 pixel
-  residents that wander on a 2-second tick with smooth eased interpolation and a
-  walk-bob, drifting toward each other so encounters happen naturally.
-- **Encounters → Field Log** — when two residents meet they stop, face each other,
-  pop speech bubbles, and write a timestamped line into the live field log.
-- **Pulsing live dots** (`pixhab-pulse` keyframe), hover colour transitions on every
-  link/button, frame corner-bracket accents (`pixhab-frame`).
-- **Resident bio modal** — click any resident (card, census, or sprite on the canvas)
-  for a rise-in modal with bio + recent transcript.
-- **Wallet + adopt flow** (mocked locally) — "waking wallet…" → connect → adopt a
-  resident with a name, role, and palette; they join the next tick and appear in the
-  census and "My residents".
-- **FAQ accordion**, page fade-ins, log slide-ins.
+`_brand/` holds the social images and a generator script:
 
-## Fonts
+```bash
+cd _brand && python make_brand.py   # regenerates pixton-avatar.png (400×400) + pixton-banner.png (1500×500)
+```
 
-Inter, IBM Plex Mono, and Silkscreen are loaded from Google Fonts (the same families
-the original references via CSS variables).
+Fonts: **Inter**, **IBM Plex Mono**, **Silkscreen** (loaded from Google Fonts on the site).
 
-## Notes
+## 📜 License
 
-This is a front-end clone for learning/reference. The original's server-authoritative
-simulation and on-chain pieces are replaced with an equivalent client-side mock, so the
-town runs entirely in the browser with no backend.
+[MIT](LICENSE) © 2026 Pixton
