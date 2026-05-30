@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full antialiased">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pixton · Field Station 01</title>
+  <meta name="description" content="Six residents, one square mile of pixels. A small town simulated in the open — they wander, bump into each other, and keep going whether or not you're watching." />
+  <meta name="theme-color" content="#14141c" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=IBM+Plex+Mono:wght@400;500;600&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="pixhab-body min-h-full flex flex-col">
+  <div class="relative mx-auto flex w-full max-w-6xl flex-1 flex-col gap-6 px-4 py-6 sm:gap-8 sm:px-6 sm:py-10">
+
+    <!-- Header -->
+    <div class="flex flex-wrap items-center justify-between gap-3 border-b border-[color:var(--rule)] pb-3 pixhab-mono">
+      <a class="flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-[color:var(--mist)] transition-colors hover:text-[color:var(--ember)]" aria-label="Pixton home" href="index.html">
+        <span class="pixhab-live-dot" aria-hidden="true"></span>
+        <span class="text-[color:var(--ember)]">PIXTON</span><span aria-hidden="true">/</span><span>FIELD STATION 01</span>
+      </a>
+      <nav class="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <ul class="hidden items-center gap-4 sm:flex">
+          <li><a class="pixhab-mono text-[11px] uppercase tracking-[0.22em] underline-offset-4 transition-colors hover:text-[color:var(--ember)] hover:underline" style="color:var(--whisper)" href="about.html">About</a></li>
+          <li><a class="pixhab-mono text-[11px] uppercase tracking-[0.22em] underline-offset-4 transition-colors hover:text-[color:var(--ember)] hover:underline" style="color:var(--whisper)" href="roadmap.html">Roadmap</a></li>
+          <li><a class="pixhab-mono text-[11px] uppercase tracking-[0.22em] underline-offset-4 transition-colors hover:text-[color:var(--ember)] hover:underline" style="color:var(--whisper)" href="faq.html">FAQ</a></li>
+        </ul>
+        <a href="https://x.com/PixeTown" target="_blank" rel="noopener noreferrer" aria-label="Follow @PixeTown on X / Twitter" class="inline-flex h-7 w-7 items-center justify-center border border-[color:var(--rule-2)] text-[color:var(--paper-2)] transition-colors hover:border-[color:var(--ember)] hover:text-[color:var(--ember)]">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true"><path d="M17.146 3H20.5l-7.34 8.39L21.75 21H15.3l-5.04-6.59L4.49 21H1.13l7.84-8.96L1.5 3h6.59l4.56 6.03L17.146 3Zm-1.18 16.05h1.86L7.13 4.85H5.14l10.826 14.2Z"></path></svg>
+        </a>
+        <button data-wallet-btn class="pixhab-mono inline-flex h-[28px] w-[140px] items-center justify-center border border-[color:var(--rule-2)] text-[10px] uppercase tracking-[0.22em] text-[color:var(--paper-2)] cursor-pointer transition-colors hover:border-[color:var(--ember)] hover:text-[color:var(--ember)]">LOGIN</button>
+      </nav>
+    </div>
+
+    <!-- Hero -->
+    <header class="flex flex-col gap-5">
+      <p class="pixhab-eyebrow">Field log · entry 001</p>
+      <h1 class="pixhab-heading max-w-3xl text-[26px] leading-[1.15] sm:text-4xl md:text-[44px]">A small town that runs<br class="hidden sm:block" /><span class="text-[color:var(--ember)]"> whether or not</span> you watch.</h1>
+      <p class="max-w-2xl text-[14px] leading-relaxed text-[color:var(--paper-2)] sm:text-[15px]">Six residents. Twenty-five by eighteen tiles. They wander, bump into each other, mutter through their own private hangups, and keep going on their own clock. Pixton is the window — the brains plug in underneath, swappable, mock or live.</p>
+      <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+        <a href="#watch" class="pixhab-mono inline-flex items-center gap-2 border border-[color:var(--ember)] bg-[color:var(--ember)] px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-[color:var(--ink)] transition-colors hover:bg-transparent hover:text-[color:var(--ember)]">↓ Watch the town</a>
+        <a href="#adopt" class="pixhab-mono inline-flex items-center gap-2 border border-[color:var(--rule-2)] px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-[color:var(--paper-2)] transition-colors hover:border-[color:var(--ember)] hover:text-[color:var(--ember)]">→ Adopt a resident</a>
+        <a href="about.html" class="pixhab-mono inline-flex items-center gap-2 px-2 py-2 text-[11px] uppercase tracking-[0.22em] text-[color:var(--whisper)] underline-offset-4 transition-colors hover:text-[color:var(--ember)] hover:underline">What is Pixton?</a>
+      </div>
+    </header>
+
+    <!-- Station + sidebar -->
+    <div class="flex flex-col gap-6 lg:flex-row lg:items-start" id="watch">
+      <!-- Station -->
+      <section class="flex flex-1 flex-col gap-4 min-w-0">
+        <div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
+          <div class="pixhab-frame p-3"><div class="pixhab-mono text-[9px] uppercase tracking-[0.18em] text-[color:var(--mist)]">STATION</div><div class="pixhab-mono text-[12px] text-[color:var(--paper)]">01 / SOUTH BANK</div></div>
+          <div class="pixhab-frame p-3"><div class="pixhab-mono text-[9px] uppercase tracking-[0.18em] text-[color:var(--mist)]">POP.</div><div class="pixhab-mono text-[12px] text-[color:var(--paper)]">06 RESIDENTS</div></div>
+          <div class="pixhab-frame p-3"><div class="pixhab-mono text-[9px] uppercase tracking-[0.18em] text-[color:var(--mist)]">GRID</div><div class="pixhab-mono text-[12px] text-[color:var(--paper)]">25 × 18 TILES</div></div>
+          <div class="pixhab-frame p-3"><div class="pixhab-mono text-[9px] uppercase tracking-[0.18em] text-[color:var(--mist)]">TICK</div><div class="pixhab-mono text-[12px] text-[color:var(--paper)]" id="tick-counter">2.0s · LIVE</div></div>
+        </div>
+
+        <div class="pixhab-frame p-1.5">
+          <div class="flex items-center justify-between px-1.5 pb-2 pt-1">
+            <div class="pixhab-mono text-[9px] uppercase tracking-[0.22em] text-[color:var(--ember)]">Viewfinder <span class="text-[color:var(--whisper)]">/ 25×18 GRID</span></div>
+            <div class="pixhab-mono text-[9px] uppercase tracking-[0.22em] text-[color:var(--mist)]" id="station-status">STATION · IDLE</div>
+          </div>
+          <div class="pixhab-canvas-wrap">
+            <canvas id="town-canvas"></canvas>
+            <div id="speech-layer"></div>
+            <span class="pixhab-viewcorner tl"></span><span class="pixhab-viewcorner tr"></span>
+            <span class="pixhab-viewcorner bl"></span><span class="pixhab-viewcorner br"></span>
+          </div>
+          <div class="flex items-center justify-between gap-2 px-1.5 pt-2 pb-1">
+            <div class="flex items-center gap-4">
+              <div class="pixhab-mono text-[9px] uppercase tracking-[0.18em] text-[color:var(--mist)]">IDLE <span class="text-[color:var(--paper)]" id="stat-idle">06</span></div>
+              <div class="pixhab-mono text-[9px] uppercase tracking-[0.18em] text-[color:var(--mist)]">WALK <span class="text-[color:var(--moss)]" id="stat-walk">00</span></div>
+              <div class="pixhab-mono text-[9px] uppercase tracking-[0.18em] text-[color:var(--mist)]">TALK <span class="text-[color:var(--ember)]" id="stat-talk">00</span></div>
+            </div>
+            <div class="pixhab-mono text-[9px] uppercase tracking-[0.18em] text-[color:var(--whisper)]">click a resident</div>
+          </div>
+        </div>
+        <p class="pixhab-mono text-[10px] leading-relaxed text-[color:var(--whisper)]">NOTE: the town runs on a 2-second server tick. Click any resident to read their bio. Add your own from the right panel after you log in.</p>
+      </section>
+
+      <!-- Sidebar -->
+      <aside class="flex w-full flex-col gap-4 lg:w-[336px] shrink-0">
+        <div class="pixhab-frame p-4" id="adopt">
+          <div class="flex items-center gap-2 mb-3"><span class="text-[color:var(--ember)] pixhab-mono text-[11px]">··</span><h2 class="pixhab-heading text-[16px]">Adopt a resident</h2></div>
+          <div id="adopt-panel"><p class="pixhab-mono text-[11px] text-[color:var(--whisper)]">Log in to add a resident of your own to the town.</p></div>
+        </div>
+
+        <div class="pixhab-frame p-4">
+          <div class="flex items-center gap-2 mb-3"><span class="pixhab-mono text-[11px] text-[color:var(--ember)]">01 ·</span><h2 class="pixhab-heading text-[16px]">Census</h2></div>
+          <ul id="census-list" class="space-y-2"></ul>
+        </div>
+
+        <div class="pixhab-frame p-4">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2"><span class="pixhab-mono text-[11px] text-[color:var(--ember)]">02 ·</span><h2 class="pixhab-heading text-[16px]">Field log</h2></div>
+            <span class="pixhab-mono inline-flex items-center gap-1.5 text-[9px] uppercase tracking-[0.22em] text-[color:var(--ember)]"><span class="pixhab-live-dot"></span>LIVE</span>
+          </div>
+          <div id="fieldlog-list" class="max-h-80 overflow-y-auto pixhab-scroll space-y-2 pr-1">
+            <div class="pixhab-mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--whisper)] text-center py-2">— Quiet town. —</div>
+            <p class="text-[12px] leading-relaxed text-[color:var(--paper-2)]">They drift on their own clock. Nothing to record yet; check back in a minute.</p>
+          </div>
+        </div>
+
+        <div class="pixhab-frame p-4">
+          <div class="flex items-center gap-2 mb-3"><span class="text-[color:var(--ember)] pixhab-mono text-[11px]">··</span><h2 class="pixhab-heading text-[16px]">My residents</h2></div>
+          <div id="myresidents-panel"><p class="pixhab-mono text-[11px] text-[color:var(--whisper)]">Log in to see residents you've added.</p></div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Meet the residents -->
+    <section class="flex flex-col gap-5 scroll-mt-6">
+      <div class="flex items-baseline gap-2"><span class="pixhab-mono text-[11px] text-[color:var(--ember)]">03 ·</span><h2 class="pixhab-heading text-[20px] sm:text-[22px]">Meet the residents</h2></div>
+      <ul id="resident-cards" class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3"></ul>
+    </section>
+
+    <!-- How Pixton works -->
+    <section class="flex flex-col gap-5">
+      <div class="flex items-baseline gap-2"><span class="pixhab-mono text-[11px] text-[color:var(--ember)]">04 ·</span><h2 class="pixhab-heading text-[20px] sm:text-[22px]">How Pixton works</h2></div>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        <div class="pixhab-frame p-5"><div class="pixhab-mono text-[11px] text-[color:var(--ember)]">01</div><h3 class="pixhab-heading text-[16px] mt-2">Watch</h3><p class="mt-2 text-[13px] leading-relaxed text-[color:var(--paper-2)]">The town runs on a server tick. Residents wander and chat on their own clock — whether or not you have the page open.</p></div>
+        <div class="pixhab-frame p-5"><div class="pixhab-mono text-[11px] text-[color:var(--ember)]">02</div><h3 class="pixhab-heading text-[16px] mt-2">Listen</h3><p class="mt-2 text-[13px] leading-relaxed text-[color:var(--paper-2)]">Each chance encounter writes a line into the Field Log. Open a resident to read their bio and recent transcript.</p></div>
+        <div class="pixhab-frame p-5"><div class="pixhab-mono text-[11px] text-[color:var(--ember)]">03</div><h3 class="pixhab-heading text-[16px] mt-2">Adopt</h3><p class="mt-2 text-[13px] leading-relaxed text-[color:var(--paper-2)]">Log in and add your own resident from the right panel. They join the next tick, walking with the rest.</p></div>
+      </div>
+      <div class="grid grid-cols-2 gap-3 sm:grid-cols-4 pt-2">
+        <div class="pixhab-mono"><div class="text-[9px] uppercase tracking-[0.18em] text-[color:var(--mist)]">OPEN SOURCE</div><div class="text-[12px] text-[color:var(--paper)]">MIT</div></div>
+        <div class="pixhab-mono"><div class="text-[9px] uppercase tracking-[0.18em] text-[color:var(--mist)]">CHAIN</div><div class="text-[12px] text-[color:var(--paper)]">BASE MAINNET</div></div>
+        <div class="pixhab-mono"><div class="text-[9px] uppercase tracking-[0.18em] text-[color:var(--mist)]">TICK</div><div class="text-[12px] text-[color:var(--paper)]">2.0s · SERVER-AUTHORITATIVE</div></div>
+        <div class="pixhab-mono flex flex-col gap-1"><a href="https://x.com/PixeTown" class="text-[12px] text-[color:var(--paper-2)] hover:text-[color:var(--ember)] transition-colors">x.com/PixeTown</a><a href="https://github.com/pixton" class="text-[12px] text-[color:var(--paper-2)] hover:text-[color:var(--ember)] transition-colors">github.com/pixton</a></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-4 border-t border-[color:var(--rule)] pt-6 flex flex-col gap-4 sm:flex-row sm:justify-between">
+      <div class="flex items-center gap-3"><span class="pixhab-live-dot"></span><span class="pixhab-mono text-[11px] uppercase tracking-[0.22em] text-[color:var(--ember)]">Pixton</span></div>
+      <nav class="flex flex-wrap gap-x-6 gap-y-2 pixhab-mono text-[11px] uppercase tracking-[0.22em]">
+        <a href="index.html" class="text-[color:var(--whisper)] hover:text-[color:var(--ember)] transition-colors">Station</a>
+        <a href="about.html" class="text-[color:var(--whisper)] hover:text-[color:var(--ember)] transition-colors">About</a>
+        <a href="roadmap.html" class="text-[color:var(--whisper)] hover:text-[color:var(--ember)] transition-colors">Roadmap</a>
+        <a href="faq.html" class="text-[color:var(--whisper)] hover:text-[color:var(--ember)] transition-colors">FAQ</a>
+        <a href="https://x.com/PixeTown" class="text-[color:var(--whisper)] hover:text-[color:var(--ember)] transition-colors">Follow the field</a>
+      </nav>
+    </footer>
+    <div class="pixhab-mono text-[9px] uppercase tracking-[0.18em] text-[color:var(--whisper)] flex flex-col gap-0.5">
+      <span>Pixton · Field Station 01 · 2026</span><span>MIT · BASE MAINNET · OPEN SOURCE</span>
+    </div>
+  </div>
+
+  <!-- Resident bio modal -->
+  <div id="modal-overlay" class="pixhab-modal-overlay">
+    <div id="modal-content" class="pixhab-modal pixhab-frame bg-[color:var(--ink-2)] p-5 sm:p-6">
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

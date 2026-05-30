@@ -1,0 +1,11 @@
+# captured source of the original site (reference only — not published)
+_raw/
+
+# python
+__pycache__/
+*.pyc
+
+# os junk
+.DS_Store
+Thumbs.db
+desktop.ini
