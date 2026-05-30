@@ -152,6 +152,44 @@ def make_banner(path):
     img.convert("RGB").save(path)
     print("banner ->", path)
 
+# ---------------------------------------------------------------- SOCIAL CARD
+def make_social(path):
+    # GitHub social preview / OG image — 1280x640
+    W,H=1280,640
+    img=Image.new("RGBA",(W,H),hx(INK)+(255,))
+    glow(img, 1050, -40, 700, EMBER, 72)
+    glow(img, -60, 720, 660, MOSS, 48)
+    d=ImageDraw.Draw(img)
+    dots(d, 40,40, 1240,600, 26, "#20202b", 1)
+
+    # right viewfinder scene
+    bx,by,bw,bh=773,150,420,340
+    d.rectangle([bx,by,bx+bw,by+bh], fill=hx("#11111a"))
+    mini_town(d, bx,by,bw,bh)
+    corners(d, bx-8,by-8, bw+16,bh+16, 44, 7, EMBER)
+    d.rectangle([bx+14,by+15,bx+25,by+26], fill=hx(EMBER))
+    text_ls(d,(bx+34,by+13),"LIVE",MONOM(18),EMBER,2)
+
+    # divider
+    d.rectangle([722,152,723,488], fill=hx(RULE))
+    d.rectangle([722,152,723,164], fill=hx(EMBER))
+
+    # left text block
+    x0=80
+    text_ls(d,(x0,206),"FIELD STATION 01",MONOM(22),EMBER,6)
+    lf=SIL(112); ly=248
+    d.text((x0-2,ly),"PIX",font=lf,fill=hx(EMBER))
+    w1=d.textlength("PIX",font=lf)
+    d.text((x0-2+w1+6,ly),"TON",font=lf,fill=hx(PAPER))
+    d.text((x0,392),"A small town that runs whether",font=INTER(29),fill=hx(PAPER2))
+    d.text((x0,430),"or not you watch.",font=INTER(29),fill=hx(PAPER2))
+    text_ls(d,(x0,482),"25×18 GRID  ·  2.0s TICK  ·  OPEN SOURCE",MONO(19),MIST,1)
+    text_ls(d,(x0,518),"@PixeTown",MONOM(20),EMBER,2)
+
+    img.convert("RGB").save(path)
+    print("social ->", path)
+
 if __name__=="__main__":
     make_avatar(os.path.join(HERE,"pixton-avatar.png"))
     make_banner(os.path.join(HERE,"pixton-banner.png"))
+    make_social(os.path.join(HERE,"pixton-social.png"))
